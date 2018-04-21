@@ -21,12 +21,16 @@ int main() {
   pythia.readString("Beams:eCM = 13000."); //CM energy of collision 
   
   // Settings for the Process Generation  
-  pythia.readString("PromptPhoton:gg2gammagamma = on");
-  pythia.readString("PromptPhoton:ffbar2gammagamma = on");
+  pythia.readString("ExtraDimensionsLED:ffbar2gammagamma = on");
+  pythia.readString("ExtraDimensionsLED:gg2gammagamma = on");
   pythia.readString("PhaseSpace:pTHatMin = 70.");
   pythia.readString("PhaseSpace:mHatMin = 1000.");
   pythia.readString("PhaseSpace:mHatMax = 2000.");
   
+  // LED parameters
+  pythia.readString("ExtraDimensionsLED:MD = 3000"); // Fundamental scale of gravity, same order as Ms
+  pythia.readString("ExtraDimensionsLED:n = 2"); // number of extradimensions, default =2
+
   // Initialize. 
   pythia.init();
 
