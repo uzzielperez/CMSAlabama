@@ -18,7 +18,7 @@ int main() {
   // Settings for the Process Generation  
   pythia.readString("ExtraDimensionsLED:ffbar2gammagamma = on");
   pythia.readString("ExtraDimensionsLED:gg2gammagamma = on");
-  pythia.readString("PhaseSpace:pTHatMin = 70.");
+  pythia.readString("PhaseSpace:pTHatMin = ${pTcut}");
   pythia.readString("PhaseSpace:mHatMin = ${massMin}");
   pythia.readString("PhaseSpace:mHatMax = ${massMax}");
 
